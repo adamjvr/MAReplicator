@@ -27,9 +27,9 @@ G1 Z0.0 ;move Z to "0"
 G161 Z F100 ;home Z axis minimum slowly
 M132 Z ;load current position from EPROM for Z axis
 ;**** pre-prime ****
-M106 ;Start Cooling Fan
+M107 ;Start Cooling Fan
 G1 Z30 F4000 ;drop build plate
-G1 X-130 Y-74 ;move to start position
+G1 X-130 Y-50 ;move to start position
 G1 Z0.5 ;position nozzle
 G92 E0 ;zero extrusion position
 G1 E2 F1200 ;prime (for nylon and pla)
