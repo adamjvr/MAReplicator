@@ -27,7 +27,6 @@ G1 Z0.0 ;move Z to "0"
 G161 Z F100 ;home Z axis minimum slowly
 M132 Z ;load current position from EPROM for Z axis
 ;**** pre-prime ****
-M107 ;Start Cooling Fan
 G1 Z30 F4000 ;drop build plate
 G1 X-130 Y-50 ;move to start position
 G1 Z0.5 ;position nozzle
@@ -37,6 +36,7 @@ G92 E0 ;zero extrusion position
 M108 R5.0 ;set extruder to 5 RPM
 M101 ;start extruder
 G4 P3000 ;pre-prime extruder
+M126 ;Start Cooling Fan
 G1 X-125 Y-50 Z0.2 F1100 ;do a slow wipe...
 G1 Z0.5 ;...and lift
 ;@body (marks gcode body for GPX macros)
